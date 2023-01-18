@@ -1,7 +1,7 @@
 const BookingElement = ({booking}) => {
     return (
         <>
-        <p>this is the single booking</p>
+        <h1>this is the single booking</h1>
 
          <p>{booking.name}</p>
          <p>{booking.email}</p>
