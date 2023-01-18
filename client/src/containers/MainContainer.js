@@ -9,7 +9,9 @@ const MainContainer = () => {
 
     useEffect(()=>{
         getBooking()
+        
         .then((allBookings) => {
+            
             setBookings(allBookings)
         })
     },[]);
