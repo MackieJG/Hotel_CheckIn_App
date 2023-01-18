@@ -6,7 +6,7 @@ background-color:#F4F06B;
 width: 50%;
 `
 
-const BookingElement = ({booking, removeBooking}) => {
+const BookingElement = ({booking, removeBooking, updateBooking}) => {
     const handleDelete = () => {
         deleteBooking(booking._id).then(() => {
             removeBooking(booking._id);
@@ -14,14 +14,16 @@ const BookingElement = ({booking, removeBooking}) => {
     }
 
     const changeStatus = () => {
-        // updateBooking(booking._id)
+        updateBooking(booking._id).then(()=> {
+            updateCheckIn(booking._id)
+        })
+        
     }
-
     return (
         <Card>
          <h4>{booking.name}</h4>
          <p>{booking.email}</p>
-         <button >{booking.status ? 'checked in' : 'not checked in'}</button>
+         <button onClick={changeStatus}>{booking.status ? 'checked in' : 'not checked in'}</button>
          <button onClick={handleDelete}>Bolt</button>
         </Card>
     )
