@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { postBooking } from './BookingService';
 
-const BookingForm = () => {
+const BookingForm = ({ addBooking }) => {
 
     const [formData, setFormData] = useState({
         name: "",
@@ -14,9 +15,16 @@ const BookingForm = () => {
         setFormData(newFormData);
     }
 
+    const onSubmit = (event) => {
+        event.preventDefault();
+        postBooking(formData).then((data) => {
+            addBooking(data);
+        })
+    }
+
 
     return (
-        <form>
+        <form onSubmit={onSubmit}>
             <h2>Add Booking</h2>
             <div>
                 <label>Name:</label>
