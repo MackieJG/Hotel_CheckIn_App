@@ -1,9 +1,9 @@
 import BookingElement from './BookingElement'
 
 const BookingList = ({bookings}) => {
-    const BookingData = bookings.map( (bookings) =>{
+    const BookingData = bookings.map( (booking) =>{
         return <BookingElement booking={booking} key={booking._id} />
-    })
+    }) 
      
     return(
         <>
