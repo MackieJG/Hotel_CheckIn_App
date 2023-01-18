@@ -38,6 +38,7 @@ const MainContainer = () => {
         temp.splice(indexToDelete, 1);
         setBookings(temp);
     }
+    
 
 
     return (
