@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { postBooking } from './BookingService';
 
-const BookingForm = () => {
+const BookingForm = ({ addBooking }) => {
 
     const [formData, setFormData] = useState({
         name: "",
@@ -10,13 +11,22 @@ const BookingForm = () => {
 
     const onChange = (event) => {
         const newFormData = Object.assign({}, formData)
-        newFormData[event.target.name] = event.target.value
+        newFormData[event.target.name] = 
+            event.target.type === "checkbox" ? 
+                event.target.checked : event.target.value
         setFormData(newFormData);
+    }
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+        postBooking(formData).then((data) => {
+            addBooking(data);
+        })
     }
 
 
     return (
-        <form>
+        <form onSubmit={onSubmit}>
             <h2>Add Booking</h2>
             <div>
                 <label>Name:</label>
@@ -25,7 +35,8 @@ const BookingForm = () => {
                         type='text'
                         id='name' 
                         name='name' 
-                        value={formData.name} 
+                        value={formData.name}
+                        required
                 />
             </div>
             <div>
@@ -36,6 +47,7 @@ const BookingForm = () => {
                         id='email'
                         name='email'
                         value={formData.email}
+                        required
                 />
             </div>
             <div>
