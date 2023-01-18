@@ -6,8 +6,8 @@ import styled from 'styled-components';
 
 const Body = styled.div`
   font-size: 1.5em;
-  color: #fff;
-  background-color: #062c43;
+  color: black;
+  background-image: url('https://images.pexels.com/photos/14025040/pexels-photo-14025040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   margin: 0;
   padding: 1em
 `
