@@ -7,10 +7,10 @@ const BookingTitle = styled.h3`
 `
 
 
-const BookingList = ({bookings, removeBooking, updateBooking}) => {
+const BookingList = ({bookings, removeBooking, updateCheckIn}) => {
     console.log(bookings)
     const BookingData = bookings.map( (booking) =>{
-        return <BookingElement booking={booking} key={booking._id} removeBooking={removeBooking} updateBooking={updateBooking}/>
+        return <BookingElement booking={booking} key={booking._id} removeBooking={removeBooking} updateCheckIn={updateCheckIn}/>
     }) 
      
     return(

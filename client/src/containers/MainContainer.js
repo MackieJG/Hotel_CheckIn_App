@@ -39,14 +39,17 @@ const MainContainer = () => {
         setBookings(temp);
     }
 
-    const updateCheckIn = (id) => {
-        const temp = bookings.map(b => {
-            if(b._id === id) {
-                b.status = !b.status
-            }
-            return b
-        });
-        setBookings(temp)
+    const updateCheckIn = (id, updatedBooking) => {
+        const copyBookings = [...bookings];
+        const bookingIndex = copyBookings.map(b => b._id).indexOf(id);
+        copyBookings[bookingIndex] = {...updatedBooking, id};
+        // const temp = bookings.map(b => {
+        //     if(b._id === id) {
+        //         b.status = !b.status
+        //     }
+        //     return b
+        // });
+        setBookings(copyBookings);
        
         
     }
@@ -56,7 +59,7 @@ const MainContainer = () => {
     return (
         <Body>
             <BookingForm addBooking={addBooking}/>
-            <BookingList bookings={bookings} removeBooking={removeBooking} updateBooking={updateCheckIn}/>
+            <BookingList bookings={bookings} removeBooking={removeBooking} updateCheckIn={updateCheckIn}/>
         </Body>
     )
 
