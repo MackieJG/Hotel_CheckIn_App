@@ -12,7 +12,7 @@ const BookingElement = ({booking, removeBooking}) => {
         
          <p>{booking.name}</p>
          <p>{booking.email}</p>
-         <p>{booking.status}</p>
+         <button>{booking.status ? 'checked in' : 'not checked in'}</button>
          <button onClick={handleDelete}>Bolt</button>
         </>
     )

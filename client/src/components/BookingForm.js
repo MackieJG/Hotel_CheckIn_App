@@ -11,7 +11,9 @@ const BookingForm = ({ addBooking }) => {
 
     const onChange = (event) => {
         const newFormData = Object.assign({}, formData)
-        newFormData[event.target.name] = event.target.value
+        newFormData[event.target.name] = 
+            event.target.type === "checkbox" ? 
+                event.target.checked : event.target.value
         setFormData(newFormData);
     }
 
