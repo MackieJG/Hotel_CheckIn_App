@@ -20,3 +20,9 @@ export const deleteBooking = (id) => {
     })
 }
 
+export const updateBooking = (id) => {
+    return fetch(baseURL + id, {
+        method: 'PUT'
+    }) 
+}
+

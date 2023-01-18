@@ -38,13 +38,25 @@ const MainContainer = () => {
         temp.splice(indexToDelete, 1);
         setBookings(temp);
     }
+
+    const updateCheckIn = (id) => {
+        const temp = bookings.map(b => {
+            if(b._id === id) {
+                b.status = !b.status
+            }
+            return b
+        });
+        setBookings(temp)
+       
+        
+    }
     
 
 
     return (
         <Body>
             <BookingForm addBooking={addBooking}/>
-            <BookingList bookings={bookings} removeBooking={removeBooking}/>
+            <BookingList bookings={bookings} removeBooking={removeBooking} updateBooking={updateCheckIn}/>
         </Body>
     )
 
