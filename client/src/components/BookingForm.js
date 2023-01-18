@@ -33,7 +33,8 @@ const BookingForm = ({ addBooking }) => {
                         type='text'
                         id='name' 
                         name='name' 
-                        value={formData.name} 
+                        value={formData.name}
+                        required
                 />
             </div>
             <div>
@@ -44,6 +45,7 @@ const BookingForm = ({ addBooking }) => {
                         id='email'
                         name='email'
                         value={formData.email}
+                        required
                 />
             </div>
             <div>
