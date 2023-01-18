@@ -1,4 +1,4 @@
-import BookingForm from '../components/BookingForm';
+// import BookingForm from '../components/BookingForm';
 import BookingList from '../components/BookingList';
 import { useState, useEffect } from 'react';
 import { getBooking } from '../components/BookingService';
@@ -23,8 +23,8 @@ const MainContainer = () => {
 
     return (
         <>
-            <BookingForm />
-            <BookingList/>
+            {/* <BookingForm /> */}
+            <BookingList bookings={bookings}/>
         </>
     )
 

@@ -1,11 +1,14 @@
 import BookingElement from './BookingElement'
 
-const BookingList = () => {
+const BookingList = ({bookings}) => {
+    const BookingData = bookings.map( (bookings) =>{
+        return <BookingElement booking={booking} key={booking._id} />
+    })
      
     return(
         <>
-        <p>this is the booking list placeholder</p>
-        <BookingElement/>
+
+            {BookingData}
         </>
     )
 }
