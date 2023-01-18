@@ -1,6 +1,6 @@
 import BookingElement from './BookingElement'
 
-const BookingElement = () => {
+const BookingList = () => {
      
     return(
         <>
@@ -9,3 +9,5 @@ const BookingElement = () => {
         </>
     )
 }
+
+export default BookingList;
