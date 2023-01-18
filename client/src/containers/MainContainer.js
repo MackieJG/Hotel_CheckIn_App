@@ -14,6 +14,12 @@ const MainContainer = () => {
         })
     },[]);
 
+    const addBooking = (booking) => {
+        const temp = bookings.map(b => b);
+        temp.push(booking);
+        setBookings(temp);
+    }
+
 
     return (
         <>
