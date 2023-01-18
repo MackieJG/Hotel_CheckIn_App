@@ -1,11 +1,19 @@
-const BookingElement = ({booking}) => {
+import { deleteBooking } from "./BookingService";
+
+const BookingElement = ({booking, removeBooking}) => {
+    const handleDelete = () => {
+        deleteBooking(booking._id).then(() => {
+            removeBooking(booking._id);
+        })
+    }
     return (
         <>
-        <h1>this is the single booking</h1>
-
+        
+        
          <p>{booking.name}</p>
          <p>{booking.email}</p>
          <p>{booking.status}</p>
+         <button onClick={handleDelete}>Bolt</button>
         </>
     )
 }
