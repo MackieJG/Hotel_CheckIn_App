@@ -9,7 +9,8 @@ const Body = styled.div`
   color: black;
   background-image: url('https://images.pexels.com/photos/14025040/pexels-photo-14025040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   margin: 0;
-  padding: 1em
+  padding: 1em;
+  font-family:'Raleway', sans-serif;
 `
 
 
