@@ -15,7 +15,7 @@ const BookingElement = ({booking, removeBooking, updateBooking}) => {
 
     const changeStatus = () => {
         updateBooking(booking._id).then(()=> {
-            updateCheckIn(booking._id)
+            updateBooking(booking._id)
         })
         
     }
