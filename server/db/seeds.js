@@ -7,17 +7,17 @@ db.bookings.insertMany([
     {
         name: "Benoit Blanc",
         email:"benoit@blanc.com",
-        checkedIn: true
+        status: true
     },
     {
         name: "Jack Torrance",
         email:"jack@outlookhotel.com",
-        checkedIn: true
+        status: true
     },
     {
         name: "Gustave H",
         email:"conceirge@grandbudapest.com",
-        checkedIn: false
+        status: false
     }
 
 
