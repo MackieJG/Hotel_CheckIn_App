@@ -1,10 +1,11 @@
-
+import MainContainer from './containers/MainContainer';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-     <MainContainer>Hotel Booking App</MainContainer>
+      <h1>Hotel California</h1>
+      <MainContainer/>
     </div>
   );
 }
