@@ -1,10 +1,17 @@
 import MainContainer from './containers/MainContainer';
 import './App.css';
+import styled from 'styled-components';
+
+const PageTitle = styled.h1`
+  font-weight: 800;
+  font-family:'Raleway', sans-serif;
+  font-size: 50px;
+`
 
 function App() {
   return (
     <div className="App">
-      <h1>Hotel California</h1>
+      <PageTitle>Hotel California</PageTitle>
       <MainContainer/>
     </div>
   );

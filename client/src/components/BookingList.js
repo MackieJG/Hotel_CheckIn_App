@@ -1,4 +1,11 @@
 import BookingElement from './BookingElement'
+import styled from 'styled-components';
+
+const BookingTitle = styled.h3`
+    background-color:#F4F06B;
+    width: 50%;
+`
+
 
 const BookingList = ({bookings, removeBooking}) => {
     console.log(bookings)
@@ -8,7 +15,7 @@ const BookingList = ({bookings, removeBooking}) => {
      
     return(
         <>
-            <h3><strong>Bookings</strong></h3>
+            <BookingTitle><strong>Bookings</strong></BookingTitle>
             {BookingData}
         </>
     )

@@ -2,7 +2,8 @@ import { deleteBooking } from "./BookingService";
 import styled from "styled-components";
 
 const Card = styled.div`
-
+background-color:#F4F06B;
+width: 50%;
 `
 
 const BookingElement = ({booking, removeBooking}) => {
@@ -17,14 +18,12 @@ const BookingElement = ({booking, removeBooking}) => {
     }
 
     return (
-        <>
-        
-        
-         <p>{booking.name}</p>
+        <Card>
+         <h4>{booking.name}</h4>
          <p>{booking.email}</p>
          <button >{booking.status ? 'checked in' : 'not checked in'}</button>
          <button onClick={handleDelete}>Bolt</button>
-        </>
+        </Card>
     )
 }
 
