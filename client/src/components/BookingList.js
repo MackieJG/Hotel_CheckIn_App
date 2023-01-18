@@ -8,7 +8,7 @@ const BookingList = ({bookings, removeBooking}) => {
      
     return(
         <>
-            <p>this is booking list</p>
+            <h3><strong>Bookings</strong></h3>
             {BookingData}
         </>
     )
