@@ -2,6 +2,15 @@ import BookingForm from '../components/BookingForm';
 import BookingList from '../components/BookingList';
 import { useState, useEffect } from 'react';
 import { getBooking } from '../components/BookingService';
+import styled from 'styled-components';
+
+const Body = styled.div`
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #062c43;
+  margin: 0;
+  padding: 1em
+`
 
 
 const MainContainer = () => {
@@ -31,10 +40,10 @@ const MainContainer = () => {
 
 
     return (
-        <>
+        <Body>
             <BookingForm addBooking={addBooking}/>
             <BookingList bookings={bookings} removeBooking={removeBooking}/>
-        </>
+        </Body>
     )
 
 
