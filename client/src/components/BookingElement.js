@@ -1,4 +1,9 @@
 import { deleteBooking } from "./BookingService";
+import styled from "styled-components";
+
+const Card = styled.div`
+
+`
 
 const BookingElement = ({booking, removeBooking}) => {
     const handleDelete = () => {
@@ -8,7 +13,7 @@ const BookingElement = ({booking, removeBooking}) => {
     }
 
     const changeStatus = () => {
-        updateBooking(booking._id)
+        // updateBooking(booking._id)
     }
     return (
         <>
