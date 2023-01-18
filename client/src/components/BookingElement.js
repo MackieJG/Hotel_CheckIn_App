@@ -7,9 +7,7 @@ const BookingElement = ({booking, removeBooking}) => {
         })
     }
 
-    const changeStatus = () => {
-        updateBooking(booking._id)
-    }
+
     return (
         <>
         
