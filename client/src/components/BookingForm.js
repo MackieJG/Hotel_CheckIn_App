@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const BookingForm = () => {
 
-    [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({
         name: "",
         email: "",
         status: false,
