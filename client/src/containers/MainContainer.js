@@ -1,5 +1,6 @@
-import BookingForm from './components/BookingForm';
-// import BookingList from './components/BookingList';
+
+import BookingForm from '../components/BookingForm';
+import BookingList from '../components/BookingList';
 import { useState } from 'react';
 
 
