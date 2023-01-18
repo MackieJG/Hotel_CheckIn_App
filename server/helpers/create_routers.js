@@ -5,6 +5,7 @@ const createRouter = function (collection) {
 
 
     const router = express.Router()
+  // handle index route
 
     router.get('/' , (req, res) => {
         collection
@@ -17,6 +18,7 @@ const createRouter = function (collection) {
             res.json({status: 500, error: err})
         })
     })
+  // handle post request
 
     router.post('/', (req, res) => {
         const newBooking = req.body
@@ -31,6 +33,7 @@ const createRouter = function (collection) {
             res.json({status:500, error:err})
         })
     })
+// delete
 
     router.delete('/:id', (req, res) => {
         const id = req.params.id
