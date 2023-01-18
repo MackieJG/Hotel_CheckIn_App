@@ -1,11 +1,12 @@
 import BookingForm from './components/BookingForm';
-// import BookingList from './components/BookingList';
+import BookingList from './components/BookingList';
 
 const MainContainer = () => {
 
     return (
         <>
             <BookingForm />
+            <BookingList/>
         </>
     )
 
