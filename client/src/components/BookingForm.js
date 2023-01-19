@@ -51,7 +51,7 @@ const BookingForm = ({ addBooking }) => {
                 />
             </div>
             <div>
-                <label>Status:</label>
+                <label>Checked In?</label>
                 <input 
                         onChange={onChange} 
                         type='checkbox'

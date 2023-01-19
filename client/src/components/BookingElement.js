@@ -31,8 +31,8 @@ const BookingElement = ({booking, removeBooking, updateCheckIn}) => {
         <Card>
          <h4>{booking.name}</h4>
          <p>{booking.email}</p>
-         <button onClick={changeStatus}>{booking.status ? 'checked in' : 'not checked in'}</button>
-         <button onClick={handleDelete}>Bolt</button>
+         <button onClick={changeStatus}>{booking.status ? 'Checked In' : 'Not Checked In'}</button>
+         <button onClick={handleDelete}>Delete</button>
         </Card>
     )
 }
